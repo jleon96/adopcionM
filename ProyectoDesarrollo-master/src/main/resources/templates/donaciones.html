@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="plantilla/template::head"></head>
+    <body style="display: flex; flex-direction: column; min-height: 100vh;">
+        <header th:replace="plantilla/template::header"></header>
+        <div>
+            <div class="text">
+                <h1 th:text="#{accion.infodonaciones}"></h1>
+                <h2 th:text="#{accion.donaciongracias}"></h2>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${success != null}">
+                <label th:text="${success}"></label>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <div class="contact_form">
+                <form th:object ="${donacion}"
+                      th:action ="@{/saveD}"
+                      method="POST" 
+                      >
+                    <input type="hidden" th:field="*{id}">
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" th:text="#{donacion.numtarjeta}" ></label>
+                            <input type="text" th:field="*{numero}" class="form-control" id="numero" required="obligatorio" placeholder="Numero de tarjeta">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" th:text="#{donacion.codigo}"></label>
+                            <input type="password" th:field="*{codigo}" class="form-control" id="codigo" required="obligatorio"  placeholder="Codigo de seguridad">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label" th:text="#{donacion.monto}"></label>
+                            <input type="text" th:field="*{monto}"class="form-control" id="monto" required="obligatorio" placeholder="Monto a donar">
+                        </div>
+
+                        <div class="">
+                            <button class="btn btn-dark btn-group-sm " type="submit" th:text="#{accion.hacerdonacion}" ></button>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+
+        <footer th:replace="plantilla/template::footer">  
+        </footer>
+    </body>
+</html>

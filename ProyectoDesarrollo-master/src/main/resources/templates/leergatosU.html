@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="plantilla/template::head">
+    </head>
+    <body style="display: flex; flex-direction: column; min-height: 100vh;">
+        <header th:replace="plantilla/template::header"></header>
+        <div class="descripcion" align-items="center">
+            <h1 style="text-align: center;" th:text="#{gato.info}"></h1>
+        </div>
+
+        <div class="container mt-5">
+            <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${success != null}">
+                <label th:text="${success}"></label>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <th:block th:each="user : ${gatos}">
+                <div class="row justify-content-center ">
+                    <div class="card" style="width: 30rem; margin: 3rem 3rem 3rem 3rem;">
+                        <div class="row">
+
+                            <div class="col-md-7 justify-content-center">
+                                <img th:src="@{'/fotos/' + ${user.getImagen}}" class="float-left ml-1" style="max-height: 75%;
+                                     max-width: 75%;" th:alt="${user.getImagen}">
+                                <h3 class="card-title" th:text="${user.getNombre}"></h3>
+                                <h4 th:text="${user.getRaza}"></h4>
+                                <p th:text="${user.getDescripcion}"></p>                 
+                                <a th:href="@{/EliminarGatos/{ID}(ID=${user.getID})}" class="btn btn-dark" th:text="#{accion.adoptar}"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+        <footer th:replace="plantilla/template::footer"></footer> 
+    </body>
+</html>

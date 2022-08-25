@@ -1,0 +1,64 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 2 jun. 2022, 15:33:03
+    Author     : asus
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    position: relative;
+    right:40px;
+}
+
+.gato1{
+    height: 10%;
+    position:absolute;
+    bottom: 50px;
+    right:160px;
+}
+
+.text h1{
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+/*FIN DE MENU DE NAVEGACION.*/
+
+
+
+
+
+
+.Gato1 {
+    height: 21.5%;
+    position: absolute;
+    top: 150px;
+    right: 20px;
+}
+
+.Gato2 {
+    height: 20%;
+    position: absolute;
+    top: 350px;
+    right: 45px;
+}
+
+.Gato3 {
+    height: 20%;
+    position: absolute;
+    top: 550px;
+    right: 20px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head th:fragment="head">
+        <title>Adopcion Mascotas</title>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+            <link th:href="@{../css/style.css}" th:rel="@{stylesheet}"/>
+    </head>
+    <body>
+
+        <header th:fragment="header">
+            <nav class="navbar navbar-expand-lg navbar" style="background-color: red;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href=""><img th:src="@{../images/Logo.png}" width="50px" height="50px" th:text="#{adopcion.mascotas}"><!--</span>Adopcion--></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav justify-content-end">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/Index.html" th:text="#{accion.inicio}"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"></a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle  active"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.alimentoMascotas}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"  href="/leerAlimentosU" th:text="#{accion.alimentoMascotas}"></a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.usuarios}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/leerusuarioU}" th:text="#{accion.leerusuarios}"></a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.donaciones}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/donacionesN}" th:text="#{accion.hacerdonacion}"></a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.consejo}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="consejos.html" th:text="#{accion.consejop}"></a></li>
+                                    <li><a class="dropdown-item" href="consejosG.html" th:text="#{accion.consejog}"></a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/leercomentarios" th:text="#{accion.comentario}"></a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{animales.adopcion}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/leerperrosU}" th:text="#{animal.perro}" ></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/leergatosU}"th:text="#{animal.gato}"></a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" th:href="@{/contactoN}" th:text="#{accion.contactenos}"></a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.administrador}">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" th:href="@{/leerusuarios}" th:text="#{accion.manejodeUsuarios}"></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/leerAlimentos}" th:text="#{accion.alimentoMascotas}"></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/leergatos}" th:text="#{animal.gato}" ></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/leerperros}"th:text="#{animal.perro}"></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/leerdonaciones}" th:text="#{donaciones.leer}" ></a></li>
+                                    <li><a class="dropdown-item" th:href="@{/comentariosLista}"   th:text="#{accion.comentariosmanejo}"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline my-2 my-lg-0" form-method="post" th:action="@{/logout}">
+                            <button sec:authorize="isAuthenticated()" class="btn btn-dark btn-lg " type="submit" th:text="#{accion.cerrarsesion}"></button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <footer th:fragment="footer" class="mt-5 bg-dark fixed-bottom text-white text-lg-start" style="position: relative;">
+            <div class="mb-0 bg-dark">
+
+                <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2)">
+                    © 2022 Copyright:
+                    <a class="text-white" href="#">Adopcion</a>
+                    </sapn> 
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                       th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}">ES</a>  
+                    <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                       th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}">EN</a>
+                </div>
+
+            </div>
+        </footer>
+    </body>
+</html>

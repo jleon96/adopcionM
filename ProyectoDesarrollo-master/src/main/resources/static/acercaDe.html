@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head >
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- CSS only -->
+                <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+                <!-- JavaScript Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+                <link href="css/index.css" rel="stylesheet" type="text/css"/>
+                </head>
+                <body>
+                    <header>
+
+                        <nav class="navbar navbar-expand-lg navbar" style="background-color: red; ">
+                            <div class="container-fluid">
+                                <a class=" navbar-brand"><h1><img src="images/Logo.png" width="50px" height="50px"></span>Adopta un Amigo</h1></a>
+                                <!--<a class="navbar-brand" href="#">Navbar</a>-->
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="index">Inicio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/leerAlimentos">Alimentos</a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Para ti</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Más información</a></li>
+                                                <li><a class="dropdown-item" href="acercaDe.html">Acerca del sitio web</a></li>
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="/crearcomentarioN">Realizar un comentario</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{accion.usuarios}">
+                                                Usuarios
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/leerusuarios" >Usuarios</a></li>
+                                                <li><a class="dropdown-item" href="/usuarioNI" >Nuevo Usuario</a></li>
+
+                                            </ul>
+
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{animales.adopcion}">
+                                                    Animales en Adopcion
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="/leerperrosU" th:text="#{animal.perro}" >Perros</a></li>
+                                                    <li><a class="dropdown-item" href="/leergatosU" th:text="#{animal.gato}">Gatos</a></li>                                 
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="/contactoN">Contactenos</a>
+                                            </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </header>
+
+                    <!--Textos-->
+                    <div class="text">
+                        <h1>La fundacion "Peludos" busca incitar a las personas a adoptar una mascota antes de comprarlas o conseguir un amigo peludo de forma inadecuada... Grupo#5 - Desarrollo web</h1>
+                    </div>
+                    <!--Imagenes-->
+                    <div class="imagenes">
+                        <img src="images/acercaDe1.jpg" class="acerca1" alt="Esto es una imagen de ¿Quienes somos?">
+                    </div>
+                </body>
+                </html>

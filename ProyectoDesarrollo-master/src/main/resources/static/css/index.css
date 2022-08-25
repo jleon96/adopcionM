@@ -1,0 +1,309 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #FFC107;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisclaro: #DFE9F3;
+}
+
+
+
+
+
+button{
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #ab4493;
+    border-color: #ab4493;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+body{
+    background-color: white ;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/*INICIO MENU DE NAVEGACION*/
+
+/*nav{
+    max-width: 900px;
+    margin: auto;
+    background-color: red;
+    font-size: 20px;
+  
+
+}
+header{
+    margin-top: 0;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.menu > li > a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu > li:hover{
+    background-color: darkred;
+}
+
+.submenu{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.menu li:hover .submenu{
+    display: block;
+}
+.menu li:hover{
+    background-color: black;
+}
+
+.submenu li a {
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+
+}*/
+
+/*FIN DE MENU DE NAVEGACION.*/
+
+
+
+.container{
+
+    position: relative;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.Formulario {
+    position: relative;
+    background-color: white;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin-left: 50px;
+    margin-top: 0;
+
+}
+
+.perro1{
+    background-image: url(../images/perro-gato.webp);
+    background-size: cover;
+    background-position: center top;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 2px 2px;
+    height: 500px;
+}
+
+.text11{
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-top: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+.text12{
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-top: 0;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+.Purina{
+
+    text-align: center;
+    background-size: cover;
+    background-position: center top;
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 0;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding: 2px 2px;
+    height: 500px;
+
+}
+
+.text p{
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgoldenrodyellow;
+}
+
+
+
+/*ESTILO CONTACTO*/
+.contact_form{
+    width: 460px;
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #fbfbfb;
+    padding-left: 30px;
+}
+
+input{
+    background-color: #fbfbfb;
+    width: 408px;
+    height: 40px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+textarea{
+    background-color: #fbfbfb;
+    width: 405px;
+    height: 150px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ab4493;
+    margin-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+}
+
+label{
+    display: block;
+    float: center;
+}
+
+button{
+    height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    background-color: #ab4493;
+    border-color: #ab4493;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+button p{
+    color: #fff;
+}
+
+span{
+    color: #ab4493;
+}
+
+.aviso{
+    font-size: 13px;
+    color: #0e0e0e;
+}
+
+h1{
+    font-size: 39px;
+
+
+}
+
+h3{
+    font-size: 16px;
+    padding-bottom: 30px;
+    color: #0e0e0e;
+}
+
+p{
+    font-size: 14px;
+    color: #0e0e0e;
+}
+
+::-webkit-input-placeholder {
+    color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+    color: #a8a8a8;
+}
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+
+
+
+.newUser{
+    text-decoration: none;
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+
+}

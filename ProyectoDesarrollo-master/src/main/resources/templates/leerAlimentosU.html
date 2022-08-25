@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="plantilla/template::head">
+
+    </head>
+    <body>
+        <header th:replace="plantilla/template::header"></header>
+        <div class="descripcion" style="text-align: center;">
+            <h1 th:text="#{alimento.titulo}"></h1>
+            <h2 th:text="#{alimento.descripcion}"></h2>
+        </div>    
+
+
+        <div class="container mt-5">
+            <div class="alert alert-info alert-dismissible fade show" role="alert" th:if="${info != null}">
+                <label th:text="${info}"></label>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <th:block th:each="user : ${alimentos}">
+                <div class="row justify-content-center ">
+                    <div class="card" style="width: 30rem; margin: 3rem 3rem 3rem 3rem;">
+                        <div class="row">
+
+                            <div class="col-md-7 justify-content-center">
+                                <img th:src="@{'/fotos/' + ${user.getImagen}}" class="float-left ml-1" style="max-height: 75%;
+                                     max-width: 75%;" th:alt="${user.getImagen}">
+                                    <h3 class="card-title" th:text="${user.getNombre}"></h3>
+                                    <h4 th:text="${user.getTipo}"></h4>
+                                    <h4 th:text="${user.getEdad}"></h4>
+                                    <h4 th:text="${user.getPeso}"></h4>
+                                    <h4 th:text="${user.getDescripcion}"></h4>
+                                    <a th:href="@{/EliminarAlimento/{id}(id=${user.getId})}" class="btn btn-dark" th:text="#{accion.comprarAlimento}">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+        <footer th:replace="plantilla/template::footer"></footer>
+    </body>
+</html>

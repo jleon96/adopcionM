@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head >
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!-- CSS only -->
+                <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+                <!-- JavaScript Bundle with Popper -->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+                <link href="css/index.css" rel="stylesheet" type="text/css"/>
+                </head>
+                <body  style="display: flex; flex-direction: column; min-height: 100vh;">
+                    <header th:fragment="header">
+                        <nav class="navbar navbar-expand-lg navbar" style="background-color: red;">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="index.html"><img src="images/Logo.png" width="50px" height="50px"></span>Adopcion Mascotas</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav justify-content-end">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/Index.html" th:text="#{accion.inicio}">Inicio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#"></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle  active"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Alimentos
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item"  href="/leerAlimentosU" >Ver Alimentos</a></li>
+
+                                            </ul>
+
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Nuestros Usuarios
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/leerusuarioU" >Ver Usuarios</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >Donaciones
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/donacionesN" th:text="#{accion.hacerdonacion}">Hacer Donacion</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                                Consejos
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="consejos.html" >Consejos Para Perros</a></li>
+                                                <li><a class="dropdown-item" href="consejosG.html">Consejos Para Gatos</a></li>
+
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/leercomentarios" > Comentarios</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                                Animales en Adopcion
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/leerperrosU" th:text="#{animal.perro}" >Perros</a></li>
+                                                <li><a class="dropdown-item" href="/leergatosU"th:text="#{animal.gato}">Gatos</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/contactoN" th:text="#{accion.contactenos}">Contactenos</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" > Funciones para Administrador
+                                            </a>
+                                            <ul class="dropdown-menu">
+
+
+                                                <li><a class="dropdown-item" href="/leerusuarios" >Administracion de Usuarios</a></li>
+                                                <li><a class="dropdown-item" href="/leerAlimentos" >Alimentos</a></li>
+                                                <li><a class="dropdown-item" href="/leergatos"  >Gatos</a></li>
+                                                <li><a class="dropdown-item" href="/leerperros">Perros</a></li>
+                                                <li><a class="dropdown-item" href="/leerdonaciones" " >Ver Donaciones</a></li>
+                                                <li><a class="dropdown-item" href="/comentariosLista"  > Lista de Comentarios</a></li>
+
+
+
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        </div>
+                    </header>
+                    <div class="imagenes perro1">
+                    </div>
+                    <div class="" >
+                        <div class="row">
+                            <div class="col-12 banner">
+                                <h1 class="text11">
+                                    Ellos merecen otra oportunidad
+                                </h1>
+                                <h2 class="text12">
+                                    Juntos la vida es mejor
+                                </h2>
+                            </div>
+                        </div>	
+                    </div>
+                    <div class="Purina">
+                        <img src="images/Purina.png" lt="Esto es una imagen de Purina">
+                    </div>
+                    <div class="text">
+                        <p>Sabemos que la adopcion de mascotas representa grandes beneficios para la sociedad. Es por eso que promovemos la adopcion responsable con distintas acciones como: <strong>donar alimento de primera calidad a refugios de animales, informar sobre los procesos de adopcion e impulsar campañas de adopcion.</strong>  </p>
+                    </div>
+
+
+                    <footer th:fragment="footer" class="mt-5 bg-dark fixed-bottom text-white text-lg-start" style="position: relative;">
+                        <div class="mb-0 bg-dark">
+
+                            <div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 0.2)">
+                                © 2022 Copyright:
+                                <a class="text-white" href="#">Adopcion</a>
+                                </sapn> 
+                                <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                   th:href="${urlBuilder.replaceQueryParam('lang','es').toUriString()}"></a>  
+                                <a th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
+                                   th:href="${urlBuilder.replaceQueryParam('lang','en').toUriString()}"></a>
+                            </div>
+
+                        </div>
+                    </footer>
+
+                </body>
+
+                </html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="plantilla/template::head"></head>
+    <body>
+        <header th:replace="plantilla/template::header"></header>
+        <!--  Inicio formulario -->
+        <!-- Inicia Formulario para creacion de un nuevo usuario -->
+        <div class="contact_form">
+            <div class="formulario">      
+                <tbody>
+                    <th:block th:each="user:${usuario}">
+                        <tr>
+                            <td th:text="${user.getNombre}"></td>
+                            <td th:text="${user.getApellido1}"></td>
+                            <td th:text="${user.getApellido2}"></td>
+                            <td th:text="${user.getUsername}"></td>
+                            <td th:text="${user.getTelefono}"></td>
+                            <td th:text="${user.getEmail}"></td>
+                            <td>
+                                <a th:href="@{/EditarUsuario/{ID}(ID=${user.getID})}">Editar</a>
+                            </td>
+                            <td>
+                                <a th:href="@{/EliminarUsuario/{ID}(ID=${user.getID})}">Eliminar</a>
+                            </td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </div>
+            <!-- fin formulario -->
+     <footer th:replace="plantilla/template::footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+
+<html>
+    <head>
+        <title>Contacto</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/index.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <a class=" title"><h1><img src="images/Logo.png" width="50px" height="50px"></span>Adopta Un Amigo</h1></a>
+            <!--<h1>Adopta un amigo</h1>-->
+
+            <nav>
+
+                <ul class="menu">
+
+                    <li ><a href="index.html">Inicio</a></li>
+                    <li ><a href="#">Animales en adopcion</a>
+                        <ul class="submenu">
+                            <li><a href="perros.html">Perros</a></li>
+                            <li><a href="gatos.html">Gatos</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="#">Servicios</a>
+                        <ul class="submenu">
+                            <li><a href="consejos.html">Consejos</a></li>
+                            <li><a href="alimentos.html">Alimentos</a></li>
+                        </ul>
+                    </li>
+                    <li ><a href="leercomentarios.html">Comentarios</a></li>
+                    <li ><a href="acercaDe.html">Quienes somos?</a></li>
+                    <li ><a href="/donacionesN">Donaciones</a></li>
+                    <li ><a href="login.html">Iniciar sesion</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <!-- formulario de contacto en html y css -->  
+
+            <div class="contact_form">
+
+                <div class="formulario">      
+                    <h1>Crear un comentario</h1>
+
+                    <form action="submeter-formulario.php" method="post">       
+
+
+                        <p>
+                            <label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        </p>
+
+                        <p>
+                            <label for="mensaje" class="colocar_mensaje">Comentario
+                                <span class="obligatorio">*</span>
+                            </label>                     
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                        </p>                    
+
+                        <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+                        <p class="aviso">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>          
+
+                    </form>
+                </div>  
+            </div>
+
+
+
+        </div>
+
+    </body>
+</html>
